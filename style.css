@@ -21,81 +21,24 @@ a{
     /* font-weight: 400;
     font-style: normal; */
 }
-/* intro스타일 */
-.intro{
-    display: none;
-}
-.l_top{
-    position: fixed; top: 471.1px; left: 440px;
-}
-.l_bottom{
-    position: fixed; top: 550px; left: 440px;
-}
-.o_top{
-    position: fixed; top: 501.1px; left: 535px;
-}
-.o_bottom{
-    position: fixed; top: 550px; left: 535px;
-}
-.o__top {
-    position: fixed; top: 501.1px; left: 643px;
-}
-.o__bottom {
-    position: fixed; top: 550px; left: 643px;
-}
-.k_top{
-    position: fixed; top: 472px; left: 754px;
-}
-.k_bottom{
-    position: fixed; top: 550px; left: 754px;
-}
-.a_top{
-    position: fixed; top: 501.3px; left: 898.5px;
-}
-.a_bottom{
-    position: fixed; top: 550px; left: 896px;
-}
-.t_top{
-    position: fixed; top: 479.5px; left: 993px;
-}
-.t_bottom{
-    position: fixed; top: 550px; left: 1005px;
-}
-.t__top{
-    position: fixed; top: 479.5px; left: 1101px;
-}
-.t__bottom{
-    position: fixed; top: 550px; left: 1113px;
-}
-.h_top{
-    position: fixed; top: 472px; left: 1179px;
-}
-.h_bottom{
-    position: fixed; top: 550px; left: 1179px;
-}
-.i_top{
-    position: fixed; top: 472px; left: 1290px;
-}
-.i_bottom{
-    position: fixed; top: 550px; left: 1290px;
-}
-.s_top{
-    position: fixed; top: 501.5px; left: 1341px;
-}
-.s_bottom{
-    position: fixed; top: 550px; left: 1339px;
-}
-.bang_top{
-    position: fixed; top: 472px; left: 1446px;
-}
-.bang_bottom{
-    position: fixed; top: 550px; left: 1446px;
+
+.wrap {
+    display: flex;
+    transition: 1s ease;;
+    background-color: black;
+    position: relative;
 }
 
+.main, .project_nomanual {
+    display: block;
+    width: 100%; height: 100vh;
+}
 /* main 스타일 */
 .main {
-    display: none;
-    background-color: black;
+    display: block;
+    position: relative;
+    z-index: 1;
+    left: 0; top: 0;
 }
 .title h2 {
     font-size: 1.875rem;
@@ -109,43 +52,40 @@ a{
     color: white;
 }
 /* 헤더 텍스트 스타일 */
-.main .header {
-    position: relative; z-index: 10;
+.main .explain {
+    position: relative; z-index: 1;
 }
-.main .header h1 {
+.main .explain h1 {
     font-size: 3rem;
     font-weight: 900;
     display: block;
     padding: 1% 3%;
 }
-.main .header span {
+.main .explain span {
     font-size: 1.125rem;
     color: #c9c9c9;
     margin-right: 2%;
 }
-.main .header .span2 {
+.main .explain .span2 {
     padding-left: 3%;
 }
-.main .header p {
+.main .explain p {
     font-size: 1.25rem;
     padding-left: 3%;
     padding-top: 1.5%;
     display: block;
 }
-.main .header ul li{
+.main .explain ul li{
     display: flex;
     margin-bottom: 3%;
     margin-left: 3%;
     cursor: pointer;
     align-items: center;
 }
-.main .header ul li:nth-child(1){
+.main .explain ul li:nth-child(1){
     margin-top: 5%;
 }
-.main .header ul li:nth-child(1) a{
-    color: white;
-}
-.main .header ul li a {
+.main .explain ul li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
@@ -153,10 +93,13 @@ a{
     width: 100px;
     color: #808080;
 }
-.main .header ul li a:hover + img{
+.main .explain ul li a:hover {
+    color: white;
+}
+.main .explain ul li a:hover + img{
     visibility: visible;
 }
-.main .header ul li img {
+.main .explain ul li img {
     width: 1%; height: 1%;
     visibility: hidden;
     transition: visibility 0.3s ease, opacity 0.3s ease;
@@ -388,7 +331,11 @@ a{
 
 /* project nomanual 스타일 */
 .project_nomanual {
-    /* display: none; */
+    position: relative; top: 0; left: 100%;
+    display: none;
+    width: 100vw; height: 100vh;
+}
+.title, .header, .txt_container {
     position: relative;
 }
 .title h2 {
@@ -420,6 +367,17 @@ a{
 .project_nomanual .header .span2 {
     padding-left: 3%;
 }
+.project_nomanual .header #backBtn {
+    position: absolute; bottom: 3vw; right: 10vw;
+    font-size: 1.125rem;
+    color: white;
+    background-color: black;
+    margin-left: 15%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
 .project_nomanual .header p {
     font-size: 1.25rem;
     padding-left: 3%;
@@ -427,7 +385,7 @@ a{
     display: block;
 }
 .project_nomanual .header ul{
-    position: absolute; top: 20%; right: 40%;
+    position: absolute; top: -2.5vw; right: 38%;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -445,13 +403,12 @@ a{
     text-align: left;
     display: block;
     width: 100px;
-    /* color: #808080; */
+    color: #808080;
 }
 .txt_container {
     width: 25vw; height: 60vh;
     display: block;
     height: auto;
-    /* background-color: #808080; */
     padding: 3%;
 }
 .txt_container ul {
@@ -470,39 +427,43 @@ a{
     color: white;
     font-size: 1.125rem;
     font-weight: bold;
+    cursor: pointer;
 }
-.txt_container img {
-    position: fixed; bottom: 6vw; left: 3%;
-    width: 7vw; height: 7vw;
+.mobile {
+    width: 25vw; height: 10vh;
+}
+.mobile img {
+    position: absolute; bottom: 8vw; left: 3vw;
+    width: 5vw; height: 5vw;
     border: 1px solid white;
     border-radius: 5px;
     background-color: black;
 }
-.txt_container span {
+.mobile span {
     font-size: 1rem;
-    position: fixed; bottom: 4vw; left: 3%;
+    position: absolute; bottom: 6vw; left: 3vw;
 }
 .nomanual_container .mac_book {
     width: 55vw; height: 40vw;
-    position: fixed; bottom: 5vw; right: 5vw;
+    position: absolute; bottom: 5vw; right: 5vw;
     z-index: 2;
     pointer-events: none;
 }
 .nomanual_container .mac_ver {
     width: 91vw; height: 64vw;
-    position: fixed; bottom: -6vw; right: -13%;
+    position: absolute; bottom: -6vw; right: -13%;
     z-index: 1;
     background-color: white;
 }
 .nomanual_container .iphone {
     width: 14vw;
-    position: fixed; bottom: 4vw; right: 50vw;
+    position: absolute; bottom: 4vw; right: 50vw;
     z-index: 3;
     pointer-events: none;
 }
 .nomanual_container .iphone_ver {
     width: 24.8vw; height: 54vw;
-    position: fixed; bottom: -8.5vw; right: 44.5vw;
+    position: absolute; bottom: -8.5vw; right: 44.5vw;
     z-index: 2;
     overflow: hidden;
     border-radius: 50px;
