@@ -122,11 +122,11 @@ $(document).ready(function() {
             iframeDoc.body.scrollTop = scrollAmount; 
             iframeDoc.documentElement.scrollTop = scrollAmount; // HTML 문서의 스크롤 위치도 변경
 
-            scrollAmount += 10; // 스크롤 양을 조금씩 증가시킴
+            scrollAmount = 10; // 스크롤 양을 조금씩 증가시킴
             if (scrollAmount > iframeDoc.body.scrollHeight - iframe.clientHeight) {
                 clearInterval(scrollInterval); // 끝까지 스크롤되면 멈춤
             }
-        }, 50); // 50ms마다 스크롤 이동
+        }, 100); // 50ms마다 스크롤 이동
     }, function() {
         // 마우스가 떠났을 때 자동 스크롤 멈춤
         clearInterval(scrollInterval); // 자동 스크롤을 멈춤
