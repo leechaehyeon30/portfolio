@@ -91,9 +91,13 @@ a{
     display: block;
     margin-bottom: 6vw;
 }
+.main .explain ul {
+    position: relative;
+    bottom: -10vw; left: 0vw;
+}
 .main .explain ul li{
     display: flex;
-    margin-bottom: 3vw;
+    margin-bottom: 6vw;
     cursor: pointer;
     align-items: center;
 }
@@ -345,8 +349,8 @@ a{
 
 
 /* project 
-nomanual 
-스타일 */
+    nomanual 
+    스타일 */
 .project_nomanual {
     position: fixed; top: 0; 
     left: 100vw;
@@ -459,8 +463,8 @@ nomanual
 }
 
 /* project 
-ikea 
-스타일 */
+    ikea 
+    스타일 */
 .project_ikea {
     position: fixed; top: 0; 
     left: 200vw;
@@ -552,7 +556,9 @@ ikea
 }
 
 
-/* project add 스타일 */
+/* project
+    add 
+    스타일 */
 .project_add {
     position: fixed; top: 0; 
     left: 300vw;
@@ -650,12 +656,13 @@ ikea
 }
 /* 헤더 텍스트 스타일 */
 .about .explain {
-    width: 35vw; height: auto;
+    width: 40vw; height: auto;
     margin-left: 3vw;
     position: relative;
 }
 .about .explain p {
     margin-bottom: 5vw;
+    font-size: 1rem;
 }
 .about .explain .gnb{
     position: absolute; top: -3vw; left: 40vw;
@@ -664,7 +671,7 @@ ikea
     align-items: center;
     z-index: 10;
 }
-.about .explain .gnb li:nth-child(1) a{
+.about .explain .gnb li:nth-child(2) a{
     color: white;
 }
 .about .explain .gnb li {
@@ -694,4 +701,25 @@ ikea
     padding: 10px;
     text-align: center;
     font-size: 1rem;
+}
+.about_container {
+    display: flex;
+}
+.about_container .profile {
+    width: 20vw; height: 55vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 5vw 8vw;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+.about_container .profile div {
+    margin: 10%;
+    width: 80%; height: 50%;
+    background-color: white;
+    border-radius: 10px;
+}
+.about_container .profile h2 {
+    font-size: 1.2rem;
 }
