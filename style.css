@@ -22,13 +22,25 @@ a{
     font-style: normal; */
 }
 
-.wrap {
-    display: flex;
-    transition: 1s ease;;
+.wrap_box{
     background-color: black;
     position: relative;
+    width: 100%; height: 100vh;
+    overflow: hidden;
 }
-
+.horizontal-slider {
+    display: flex;
+    width: 100%; height: 100%;
+    transition: transform 1s ease-in-out;
+    flex-direction: row;
+    position: relative;
+}
+.wrap{
+    width: 100%; height: 100%;
+    transition: transform 1s ease-in-out;
+    flex-direction: column;
+    /* position: relative; */
+}
 .main, .project_nomanual {
     display: block;
     width: 100%; height: 100vh;
@@ -36,13 +48,18 @@ a{
 /* main 스타일 */
 .main {
     display: block;
-    position: relative;
     z-index: 1;
-    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    /* position: relative; top: 0; left: 0; */
+}
+.title {
+    width: 30vw; height: auto;
+    margin: 1.5vw;
+    cursor: pointer;
 }
 .title h2 {
     font-size: 1.875rem;
-    padding: 1.5%;
+    /* padding: 1.5%; */
     display: block;
     font-weight: 700;
 }
@@ -52,46 +69,41 @@ a{
     color: white;
 }
 /* 헤더 텍스트 스타일 */
-.main .explain {
+.explain {
+    width: 30vw; height: auto;
+    margin-left: 3vw;
     position: relative; z-index: 1;
 }
-.main .explain h1 {
+.explain h1 {
     font-size: 3rem;
     font-weight: 900;
     display: block;
-    padding: 1% 3%;
+    margin-bottom: 1.5vw;
 }
-.main .explain span {
+.explain span {
     font-size: 1.125rem;
     color: #c9c9c9;
-    margin-right: 2%;
+    margin-right: 2vw;
 }
-.main .explain .span2 {
-    padding-left: 3%;
-}
-.main .explain p {
+.explain p {
     font-size: 1.25rem;
-    padding-left: 3%;
-    padding-top: 1.5%;
+    margin-top: 1.5vw;
     display: block;
+    margin-bottom: 6vw;
 }
 .main .explain ul li{
     display: flex;
-    margin-bottom: 3%;
-    margin-left: 3%;
+    margin-bottom: 3vw;
     cursor: pointer;
     align-items: center;
-}
-.main .explain ul li:nth-child(1){
-    margin-top: 5%;
 }
 .main .explain ul li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
     display: block;
-    width: 100px;
     color: #808080;
+    margin-right: 2vw;
 }
 .main .explain ul li a:hover {
     color: white;
@@ -100,16 +112,20 @@ a{
     visibility: visible;
 }
 .main .explain ul li img {
-    width: 1%; height: 1%;
+    width: 1vw; height: 1vw;
+    text-align: right;
     visibility: hidden;
     transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 /* 상단우측 배경이미지  */
+.container .blind {
+    position: absolute; top: 0; left: 0;
+}
 .bg_img {
     position: absolute; top: 0; right: 0;
     z-index: 1;
-    width: 50%; height: auto;
+    width: 65%; height: auto;
     display: inline-block;
 }
 .bg_img div{
@@ -117,49 +133,46 @@ a{
 }
 .image-container1{
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_main.png'); /* 이미지 URL */
+    background-image: url('img/main/nomanual_screen.png'); /* 이미지 URL */
     background-size: cover;
-    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.06) 55%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
     /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
 }
 .image-container2{
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_main.png'); /* 이미지 URL */
+    background-image: url('img/main/ikea_screen.png'); /* 이미지 URL */
     background-size: cover;
-    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.06) 55%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
     /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
 }
 .image-container3{
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_main.png'); /* 이미지 URL */
+    background-image: url('img/main/nomanual_screen.png'); /* 이미지 URL */
     background-size: cover;
-    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.06) 55%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
     /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
 }
 .image-container4{
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_main.png'); /* 이미지 URL */
+    background-image: url('img/main/nomanual_screen.png'); /* 이미지 URL */
     background-size: cover;
-    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.06) 55%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
     /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
 }
 
 /* 메인컨텐츠요소 스타일 */
 .container article {
-    width: 100vw; height: 100vh;
+    width: 100%; height: 100%;
     display: block;
     position: relative;  
-}
-.container .blind {
-    position: absolute; top: 0; left: 0;
 }
 .container .contents {
     position: absolute; top: 0; left: 0;
@@ -329,75 +342,39 @@ a{
     width: 11.5vw; height: 18.5vw;
 }
 
-/* project nomanual 스타일 */
+
+
+/* project 
+nomanual 
+스타일 */
 .project_nomanual {
-    position: relative; top: 0; left: 100%;
-    display: none;
+    position: fixed; top: 0; 
+    left: 100vw;
     width: 100vw; height: 100vh;
 }
-.title, .header, .txt_container {
-    position: relative;
-}
-.title h2 {
-    font-size: 1.875rem;
-    padding: 1.5%;
-    display: block;
-    font-weight: 700;
-}
-.title h2 span {
-    font-weight: 300;
-    font-size: 1.875rem;
-    color: white;
-}
 /* 헤더 텍스트 스타일 */
-.project_nomanual .header {
+.project_nomanual .explain {
+    width: 35vw; height: auto;
+    margin-left: 3vw;
     position: relative;
 }
-.project_nomanual .header h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    display: block;
-    padding: 1% 3%;
+.project_nomanual .explain p {
+    margin-bottom: 5vw;
 }
-.project_nomanual .header span {
-    font-size: 1.125rem;
-    color: #c9c9c9;
-    margin-right: 2%;
-}
-.project_nomanual .header .span2 {
-    padding-left: 3%;
-}
-.project_nomanual .header #backBtn {
-    position: absolute; bottom: 3vw; right: 10vw;
-    font-size: 1.125rem;
-    color: white;
-    background-color: black;
-    margin-left: 15%;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-.project_nomanual .header p {
-    font-size: 1.25rem;
-    padding-left: 3%;
-    padding-top: 1.5%;
-    display: block;
-}
-.project_nomanual .header ul{
-    position: absolute; top: -2.5vw; right: 38%;
+.project_nomanual .explain .gnb{
+    position: absolute; top: -3vw; left: 40vw;
     display: flex;
     cursor: pointer;
     align-items: center;
     z-index: 10;
 }
-.project_nomanual .header ul li:nth-child(1) a{
+.project_nomanual .explain .gnb li:nth-child(1) a{
     color: white;
 }
-.project_nomanual .header ul li {
+.project_nomanual .explain .gnb li {
     margin-left: 55%;
 }
-.project_nomanual .header ul li a {
+.project_nomanual .explain .gnb li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
@@ -405,21 +382,32 @@ a{
     width: 100px;
     color: #808080;
 }
-.txt_container {
-    width: 25vw; height: 60vh;
+.project_nomanual .explain .gnb:hover .submenu{
     display: block;
-    height: auto;
-    padding: 3%;
 }
-.txt_container ul {
+.project_nomanual .explain .submenu {
+    position: absolute; top: 3vw; right: 38%;
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.project_nomanual .explain .submenu li a{
+    display: block;
+    background-color: #000000;
+    width: 200px; height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.txt_container {
     margin-top: 3vw;
     margin-bottom: 3vw;
 }
-.txt_container ul li {
+.txt_container li {
     line-height: 1.8;
     font-size: 1rem;
 }
-.txt_container button {
+#viewSiteBtn {
     width: 13vw; height: 4vw;
     border-radius: 10px;
     border: 1px solid white;
@@ -467,62 +455,243 @@ a{
     z-index: 2;
     overflow: hidden;
     border-radius: 50px;
+    background-color: white;
+}
 
-}
-/* about 스타일 */
-.about {
-    display: none;
-    position: relative;
-}
-.title h2 {
-    font-size: 1.875rem;
-    padding: 1.5%;
-    display: block;
-    font-weight: 700;
-}
-.title h2 span {
-    font-weight: 300;
-    font-size: 1.875rem;
-    color: white;
+/* project 
+ikea 
+스타일 */
+.project_ikea {
+    position: fixed; top: 0; 
+    left: 200vw;
+    width: 100vw; height: 100vh;
 }
 /* 헤더 텍스트 스타일 */
-.about .header h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    display: block;
-    padding: 1% 3%;
+.project_ikea .explain {
+    width: 35vw; height: auto;
+    margin-left: 3vw;
+    position: relative;
 }
-.about .header span {
-    font-size: 1.125rem;
-    color: #c9c9c9;
-    margin-right: 2%;
+.project_ikea .explain p {
+    margin-bottom: 5vw;
 }
-.about .header .span2 {
-    padding-left: 3%;
-}
-.about .header p {
-    font-size: 1.25rem;
-    padding-left: 3%;
-    padding-top: 1.5%;
-    display: block;
-}
-.about .header ul{
-    position: absolute; top: 20%; right: 40%;
+.project_ikea .explain .gnb{
+    position: absolute; top: -3vw; left: 40vw;
     display: flex;
     cursor: pointer;
     align-items: center;
+    z-index: 10;
 }
-.about .header ul li:nth-child(2) a{
+.project_ikea .explain .gnb li:nth-child(1) a{
     color: white;
 }
-.about .header ul li {
+.project_ikea .explain .gnb li {
     margin-left: 55%;
 }
-.about .header ul li a {
+.project_ikea .explain .gnb li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
     display: block;
     width: 100px;
     color: #808080;
+}
+.project_ikea .explain .gnb:hover .submenu{
+    display: block;
+}
+.project_ikea .explain .submenu {
+    position: absolute; top: 3vw; right: 38%;
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.project_ikea .explain .submenu li a{
+    display: block;
+    background-color: #000000;
+    width: 200px; height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+#viewSiteBtn2 {
+    width: 13vw; height: 4vw;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ikea_container .mac_book {
+    width: 55vw; height: 40vw;
+    position: absolute; bottom: 5vw; right: 5vw;
+    z-index: 2;
+    pointer-events: none;
+}
+.ikea_container .mac_ver {
+    width: 117vw; height: 81vw;
+    position: absolute; bottom: -14.5vw; right: -26%;
+    border-radius: 20px;
+    z-index: 1;
+    background-color: white;
+}
+.ikea_container .iphone {
+    width: 14vw;
+    position: absolute; bottom: 4vw; right: 50vw;
+    z-index: 3;
+    pointer-events: none;
+}
+.ikea_container .iphone_ver {
+    width: 24.8vw; height: 54vw;
+    position: absolute; bottom: -8.5vw; right: 44.5vw;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: white;
+}
+
+
+/* project add 스타일 */
+.project_add {
+    position: fixed; top: 0; 
+    left: 300vw;
+    width: 100vw; height: 100vh;
+}
+/* 헤더 텍스트 스타일 */
+.project_add .explain {
+    width: 35vw; height: auto;
+    margin-left: 3vw;
+    position: relative;
+}
+.project_add .explain p {
+    margin-bottom: 5vw;
+}
+.project_add .explain .gnb{
+    position: absolute; top: -3vw; left: 40vw;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    z-index: 10;
+}
+.project_add .explain .gnb li:nth-child(1) a{
+    color: white;
+}
+.project_add .explain .gnb li {
+    margin-left: 55%;
+}
+.project_add .explain .gnb li a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    width: 100px;
+    color: #808080;
+}
+.project_add .explain .gnb:hover .submenu{
+    display: block;
+}
+.project_add .explain .submenu {
+    position: absolute; top: 3vw; right: 38%;
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.project_add .explain .submenu li a{
+    display: block;
+    background-color: #000000;
+    width: 200px; height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+#viewSiteBtn2 {
+    width: 13vw; height: 4vw;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add_container .mac_book {
+    width: 55vw; height: 40vw;
+    position: absolute; bottom: 5vw; right: 5vw;
+    z-index: 2;
+    pointer-events: none;
+}
+.add_container .mac_ver {
+    width: 117vw; height: 81vw;
+    position: absolute; bottom: -14.5vw; right: -26%;
+    border-radius: 20px;
+    z-index: 1;
+    background-color: white;
+}
+.add_container .iphone {
+    width: 14vw;
+    position: absolute; bottom: 4vw; right: 50vw;
+    z-index: 3;
+    pointer-events: none;
+}
+.add_container .iphone_ver {
+    width: 24.8vw; height: 54vw;
+    position: absolute; bottom: -8.5vw; right: 44.5vw;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: white;
+}
+
+/* about 스타일 */
+.about {
+    width: 100vw; height: 100vh;
+    position: fixed; top: 100vh; left: 0;
+}
+/* 헤더 텍스트 스타일 */
+.about .explain {
+    width: 35vw; height: auto;
+    margin-left: 3vw;
+    position: relative;
+}
+.about .explain p {
+    margin-bottom: 5vw;
+}
+.about .explain .gnb{
+    position: absolute; top: -3vw; left: 40vw;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    z-index: 10;
+}
+.about .explain .gnb li:nth-child(1) a{
+    color: white;
+}
+.about .explain .gnb li {
+    margin-left: 55%;
+}
+.about .explain .gnb li a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+    display: block;
+    width: 100px;
+    color: #808080;
+}
+.about .explain .gnb:hover .submenu{
+    display: block;
+}
+.about .explain .submenu {
+    position: absolute; top: 3vw; right: 38%;
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.about .explain .submenu li a{
+    display: block;
+    background-color: #000000;
+    width: 200px; height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
 }

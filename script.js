@@ -71,44 +71,16 @@ $(document).ready(function() {
         }
     );
 
-    // 메인에서 노매뉴얼로 이동 
-    $('#nextproject').click(function(e) {
-        e.preventDefault();  // 기본 링크 동작 막기
-    
-        $('.project_nomanual').animate({
-            'left': '0%'  // 화면에 보이도록 0% 위치로 이동
-        }, 1000);
-        $('.project_nomanual').show();
-    
-        $('.main').animate({
-            'left': '-100%'  // 왼쪽으로 슬라이드
-        }, 1000, function(){
-            $('.main').hide();
-        });
-    });
-    
-    $('#backBtn').click(function() {
-        $('.project_nomanual').animate({
-            'left': '100%'  // 오른쪽으로 100% 이동
-        }, 1000, function() {
-            $('.project_nomanual').hide();
-        });
-    
-        $('.main').animate({
-            'left': '0%'  // 원래 위치로 돌아옴
-        }, 1000);
-        $('.main').show();
-
-    });
-    
-    // 노매뉴얼 사이트 이동
+    // viewsite버튼 동작
     $('#viewSiteBtn').click(function() {
-        // 새 탭에서 링크 열기
         window.open("https://leechaehyeon30.github.io/nomanual/", "_blank");
     });
+    $('#viewSiteBtn2').click(function() {
+        window.open("https://leechaehyeon30.github.io/ikea/", "_blank");
+    });
 
 
-
+    // 자동스크롤 스크립트
     var scrollInterval; // 스크롤 인터벌 저장 변수
     
     $('#mac_ver').hover(function() {
@@ -126,7 +98,7 @@ $(document).ready(function() {
             if (scrollAmount > iframeDoc.body.scrollHeight - iframe.clientHeight) {
                 clearInterval(scrollInterval); // 끝까지 스크롤되면 멈춤
             }
-        }, 100); // 50ms마다 스크롤 이동
+        }, 300); // 50ms마다 스크롤 이동
     }, function() {
         // 마우스가 떠났을 때 자동 스크롤 멈춤
         clearInterval(scrollInterval); // 자동 스크롤을 멈춤
@@ -135,4 +107,129 @@ $(document).ready(function() {
         iframeDoc.documentElement.scrollTop = 0;
     });
     
+
+
+    let horizontalIndex = 0; // 가로 슬라이드 인덱스
+    let verticalIndex = 0;   // 세로 슬라이드 인덱스
+
+    const horizontalSections = $('.horizontal-slider > div'); // 가로 슬라이드 요소들
+    const verticalSections = $('.wrap > div');     // 세로 슬라이드 요소들
+
+    const totalHorizontal = horizontalSections.length;
+    // const totalVertical = verticalSections.length;
+    const totalVertical = $('.wrap > div').length;
+
+    // 가로 슬라이드
+    $('#nextproject, #nomanualproject').on('click', function() {
+        horizontalIndex++;
+        if (horizontalIndex >= totalHorizontal) {}
+        const horizontalOffsetVW = -horizontalIndex * 100;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+    $('#ikeaproject').on('click', function() {
+        horizontalIndex++;
+        if (horizontalIndex >= totalHorizontal) {}
+        const horizontalOffsetVW = -horizontalIndex * 200;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+    $('#addproject').on('click', function() {
+        horizontalIndex++;
+        if (horizontalIndex >= totalHorizontal) {}
+        const horizontalOffsetVW = -horizontalIndex * 300;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+
+    $('#backBtn').on('click', function() {
+        horizontalIndex--;
+        if (horizontalIndex < 0) {}
+        const horizontalOffsetVW = -horizontalIndex * 100;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+    $('#backBtn2').on('click', function() {
+        horizontalIndex--;
+        if (horizontalIndex < 0) {}
+        const horizontalOffsetVW = -horizontalIndex * 200;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+    $('#backBtn3').on('click', function() {
+        horizontalIndex--;
+        if (horizontalIndex < 0) {}
+        const horizontalOffsetVW = -horizontalIndex * 300;
+        $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
+    });
+
+        // 세로 슬라이드 버튼 클릭 시
+    $('#nextabout').on('click', function() {
+        verticalIndex++;
+        const verticalOffsetVH = verticalIndex * 100;
+        $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
+    });
+    $('#backBtn_about').on('click', function() {
+        verticalIndex--;
+        if (verticalIndex < 0) {}
+        const verticalOffsetVH = -verticalIndex * 100;
+        $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
+    });
+
+
+    let scrollTimeout;  // 스크롤 이벤트를 처리하기 위한 타이머
+
+    // 스크롤 이벤트 처리
+    $(window).on('wheel', function(e) {
+        e.preventDefault();  // 기본 스크롤 동작 방지
+
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);  // 이전 타이머 취소
+        }
+
+        // 150ms 후에 슬라이드 이동
+        scrollTimeout = setTimeout(function() {
+            if (e.originalEvent.deltaY > 0) {
+                // 아래로 스크롤 시
+                verticalIndex++;
+                if (verticalIndex >= totalVertical) {
+                    verticalIndex = 0;  // 끝에 도달하면 처음으로 돌아가기
+                }
+            } else {
+                // 위로 스크롤 시
+                verticalIndex--;
+                if (verticalIndex < 0) {
+                    verticalIndex = totalVertical - 1;  // 처음으로 돌아가면 마지막 슬라이드로 이동
+                }
+            }
+
+            // 슬라이드 이동
+            const verticalOffsetVH = verticalIndex * 100;
+            $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
+        }, 100);  // 150ms 후에 슬라이드 이동
+    });
+
+    let touchStartY = 0;
+
+    // 터치 시작 시 위치 기록
+    $(window).on('touchstart', function(e) {
+        touchStartY = e.originalEvent.touches[0].clientY;
+    });
+
+    // 터치 끝 시 이동 방향 감지
+    $(window).on('touchend', function(e) {
+        const touchEndY = e.originalEvent.changedTouches[0].clientY;
+
+        if (touchEndY > touchStartY) {
+            // 위로 스와이프 (슬라이드 위로 이동)
+            verticalIndex--;
+            if (verticalIndex < 0) {
+                verticalIndex = totalVertical - 1;
+            }
+        } else if (touchEndY < touchStartY) {
+            // 아래로 스와이프 (슬라이드 아래로 이동)
+            verticalIndex++;
+            if (verticalIndex >= totalVertical) {
+                verticalIndex = 0;
+            }
+        }
+        
+        const verticalOffsetVH = verticalIndex * 100;
+        $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
+    });
 });
