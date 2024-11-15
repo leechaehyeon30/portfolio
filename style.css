@@ -366,6 +366,7 @@ a{
     margin-bottom: 5vw;
 }
 .project_nomanual .explain .gnb{
+    height: 3vw;
     position: absolute; top: -3vw; left: 40vw;
     display: flex;
     cursor: pointer;
@@ -386,7 +387,8 @@ a{
     width: 100px;
     color: #808080;
 }
-.project_nomanual .explain .gnb:hover .submenu{
+.project_nomanual .explain .gnb:hover .submenu,
+.project_nomanual .explain .submenu:hover {
     display: block;
 }
 .project_nomanual .explain .submenu {
@@ -480,6 +482,7 @@ a{
     margin-bottom: 5vw;
 }
 .project_ikea .explain .gnb{
+    height: 3vw;
     position: absolute; top: -3vw; left: 40vw;
     display: flex;
     cursor: pointer;
@@ -500,7 +503,8 @@ a{
     width: 100px;
     color: #808080;
 }
-.project_ikea .explain .gnb:hover .submenu{
+.project_ikea .explain .gnb:hover .submenu,
+.project_ikea .explain .submenu:hover {
     display: block;
 }
 .project_ikea .explain .submenu {

@@ -120,26 +120,26 @@ $(document).ready(function() {
     const totalVertical = $('.wrap > div').length;
 
     // 가로 슬라이드
-    $('#nextproject, #nomanualproject').on('click', function() {
+    $('#nextproject, #nomanualproject, #ikea_move, #add_move2').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 100;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#ikeaproject').on('click', function() {
+    $('#ikeaproject, #add_move, #add2_move2').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 200;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#addproject').on('click', function() {
+    $('#addproject, #add2_move').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 300;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
 
-    $('#backBtn').on('click', function() {
+    $('#backBtn, #nomanual_move2').on('click', function() {
         horizontalIndex--;
         if (horizontalIndex < 0) {}
         const horizontalOffsetVW = -horizontalIndex * 100;
