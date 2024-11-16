@@ -45,6 +45,10 @@ a{
     display: block;
     width: 100%; height: 100vh;
 }
+
+iframe {
+    border: none;
+}
 /* main 스타일 */
 .main {
     display: block;
@@ -357,10 +361,27 @@ a{
     width: 100vw; height: 100vh;
 }
 /* 헤더 텍스트 스타일 */
+.back {
+    position: absolute; top: 5.5vw; left: 1.3vw;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 50px; height: 50px;
+}
 .project_nomanual .explain {
     width: 35vw; height: auto;
-    margin-left: 3vw;
+    margin-left: 5vw;
     position: relative;
+}
+.project_nomanual .explain .link_out_nomanual {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-right: 0;
+    color: white;
+    cursor: pointer;
+}
+.project_nomanual .explain .link_out_nomanual:hover {
+    color: violet;
 }
 .project_nomanual .explain p {
     margin-bottom: 5vw;
@@ -475,8 +496,18 @@ a{
 /* 헤더 텍스트 스타일 */
 .project_ikea .explain {
     width: 35vw; height: auto;
-    margin-left: 3vw;
+    margin-left: 5vw;
     position: relative;
+}
+.project_ikea .explain .link_out_ikea {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-right: 0;
+    color: white;
+    cursor: pointer;
+}
+.project_ikea .explain .link_out_ikea:hover {
+    color: violet;
 }
 .project_ikea .explain p {
     margin-bottom: 5vw;
@@ -571,13 +602,14 @@ a{
 /* 헤더 텍스트 스타일 */
 .project_add .explain {
     width: 35vw; height: auto;
-    margin-left: 3vw;
+    margin-left: 5vw;
     position: relative;
 }
 .project_add .explain p {
     margin-bottom: 5vw;
 }
 .project_add .explain .gnb{
+    height: 3vw;
     position: absolute; top: -3vw; left: 40vw;
     display: flex;
     cursor: pointer;
@@ -598,7 +630,8 @@ a{
     width: 100px;
     color: #808080;
 }
-.project_add .explain .gnb:hover .submenu{
+.project_add .explain .gnb:hover .submenu,
+.project_add .explain .submenu:hover {
     display: block;
 }
 .project_add .explain .submenu {
@@ -615,7 +648,7 @@ a{
     text-align: center;
     font-size: 1rem;
 }
-#viewSiteBtn2 {
+#viewSiteBtn3 {
     width: 13vw; height: 4vw;
     border-radius: 10px;
     border: 1px solid white;

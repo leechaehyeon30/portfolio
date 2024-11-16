@@ -1,0 +1,99 @@
+<div class="intro">
+            <div class="top_txt">
+                <img class="l_top" src="img/_L_top.png" alt="L">
+                <img class="o_top" src="img/O_top.png" alt="o">
+                <img class="o__top" src="img/O__top.png" alt="o">
+                <img class="k_top" src="img/K_top.png" alt="k">
+                <img class="a_top" src="img/A_top.png" alt="a">
+                <img class="t_top" src="img/T_top.png" alt="t">
+                <img class="t__top" src="img/T__top.png" alt="t">
+                <img class="h_top" src="img/H_top.png" alt="h">
+                <img class="i_top" src="img/I_top.png" alt="i">
+                <img class="s_top" src="img/S_top.png" alt="s">
+                <img class="bang_top" src="img/_bang_top.png" alt="bang">
+            </div>
+            <div class="bottom_txt">
+                <img class="l_bottom" src="img/L_bottom.png" alt="L">
+                <img class="o_bottom" src="img/O_bottom.png" alt="o">
+                <img class="o__bottom" src="img/O__bottom.png" alt="o">
+                <img class="k_bottom" src="img/K_bottom.png" alt="k">
+                <img class="a_bottom" src="img/A_bottom.png" alt="a">
+                <img class="t_bottom" src="img/T_bottom.png" alt="t">
+                <img class="t__bottom" src="img/T__bottom.png" alt="t">
+                <img class="h_bottom" src="img/H_bottom.png" alt="h">
+                <img class="i_bottom" src="img/I_bottom.png" alt="i">
+                <img class="s_bottom" src="img/S_bottom.png" alt="s">
+                <img class="bang_bottom" src="img/bang_bottom.png" alt="bang">
+            </div>
+        </div>
+
+        /* intro스타일 */
+.intro{
+    display: none;
+}
+.l_top{
+    position: fixed; top: 471.1px; left: 440px;
+}
+.l_bottom{
+    position: fixed; top: 550px; left: 440px;
+}
+.o_top{
+    position: fixed; top: 501.1px; left: 535px;
+}
+.o_bottom{
+    position: fixed; top: 550px; left: 535px;
+}
+.o__top {
+    position: fixed; top: 501.1px; left: 643px;
+}
+.o__bottom {
+    position: fixed; top: 550px; left: 643px;
+}
+.k_top{
+    position: fixed; top: 472px; left: 754px;
+}
+.k_bottom{
+    position: fixed; top: 550px; left: 754px;
+}
+.a_top{
+    position: fixed; top: 501.3px; left: 898.5px;
+}
+.a_bottom{
+    position: fixed; top: 550px; left: 896px;
+}
+.t_top{
+    position: fixed; top: 479.5px; left: 993px;
+}
+.t_bottom{
+    position: fixed; top: 550px; left: 1005px;
+}
+.t__top{
+    position: fixed; top: 479.5px; left: 1101px;
+}
+.t__bottom{
+    position: fixed; top: 550px; left: 1113px;
+}
+.h_top{
+    position: fixed; top: 472px; left: 1179px;
+}
+.h_bottom{
+    position: fixed; top: 550px; left: 1179px;
+}
+.i_top{
+    position: fixed; top: 472px; left: 1290px;
+}
+.i_bottom{
+    position: fixed; top: 550px; left: 1290px;
+}
+.s_top{
+    position: fixed; top: 501.5px; left: 1341px;
+}
+.s_bottom{
+    position: fixed; top: 550px; left: 1339px;
+}
+.bang_top{
+    position: fixed; top: 472px; left: 1446px;
+}
+.bang_bottom{
+    position: fixed; top: 550px; left: 1446px;
+}

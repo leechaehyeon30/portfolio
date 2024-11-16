@@ -72,41 +72,19 @@ $(document).ready(function() {
     );
 
     // viewsite버튼 동작
+    $('.link_out_nomanual').click(function() {
+        window.open("https://nomanual-shop.com/?srsltid=AfmBOorNuL7xK-ldpxxAj5kLUTIiHOarSBm1uW0IOEVl8agrNFZyOPtI", "_blank");
+    });
     $('#viewSiteBtn').click(function() {
         window.open("https://leechaehyeon30.github.io/nomanual/", "_blank");
+    });
+    $('.link_out_ikea').click(function() {
+        window.open("https://www.ikea.com/kr/ko/", "_blank");
     });
     $('#viewSiteBtn2').click(function() {
         window.open("https://leechaehyeon30.github.io/ikea/", "_blank");
     });
 
-
-    // 자동스크롤 스크립트
-    var scrollInterval; // 스크롤 인터벌 저장 변수
-    
-    $('#mac_ver').hover(function() {
-        // 호버했을 때 자동 스크롤 시작
-        var iframe = $('#mac_ver')[0];  // iframe DOM 객체
-        var iframeDoc = iframe.contentWindow.document; // iframe 내부 문서
-
-        var scrollAmount = 0; // 스크롤 양
-        scrollInterval = setInterval(function() {
-            // 스크롤 위치를 설정
-            iframeDoc.body.scrollTop = scrollAmount; 
-            iframeDoc.documentElement.scrollTop = scrollAmount; // HTML 문서의 스크롤 위치도 변경
-
-            scrollAmount = 10; // 스크롤 양을 조금씩 증가시킴
-            if (scrollAmount > iframeDoc.body.scrollHeight - iframe.clientHeight) {
-                clearInterval(scrollInterval); // 끝까지 스크롤되면 멈춤
-            }
-        }, 300); // 50ms마다 스크롤 이동
-    }, function() {
-        // 마우스가 떠났을 때 자동 스크롤 멈춤
-        clearInterval(scrollInterval); // 자동 스크롤을 멈춤
-
-        iframeDoc.body.scrollTop = 0;
-        iframeDoc.documentElement.scrollTop = 0;
-    });
-    
 
 
     let horizontalIndex = 0; // 가로 슬라이드 인덱스
@@ -120,38 +98,38 @@ $(document).ready(function() {
     const totalVertical = $('.wrap > div').length;
 
     // 가로 슬라이드
-    $('#nextproject, #nomanualproject, #ikea_move, #add_move2').on('click', function() {
+    $('#nextproject, #nomanualproject, #go_100_fromikea, #go_100_fromadd, #go_100_fromadd2').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 100;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#ikeaproject, #add_move, #add2_move2').on('click', function() {
+    $('#ikeaproject, #go_200_fromadd, #go_200_fromadd2').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 200;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#addproject, #add2_move').on('click', function() {
+    $('#addproject, #go_300_fromadd2').on('click', function() {
         horizontalIndex++;
         if (horizontalIndex >= totalHorizontal) {}
         const horizontalOffsetVW = -horizontalIndex * 300;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
 
-    $('#backBtn, #nomanual_move2').on('click', function() {
+    $('#backBtn, #back_home, #back_100_fromnomanual, #back_100_fromikea').on('click', function() {
         horizontalIndex--;
         if (horizontalIndex < 0) {}
         const horizontalOffsetVW = -horizontalIndex * 100;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#backBtn2').on('click', function() {
+    $('#backBtn2, #back_home2, #back_200_fromnomanual').on('click', function() {
         horizontalIndex--;
         if (horizontalIndex < 0) {}
         const horizontalOffsetVW = -horizontalIndex * 200;
         $('.horizontal-slider').css('transform', `translateX(${horizontalOffsetVW}%)`);
     });
-    $('#backBtn3').on('click', function() {
+    $('#backBtn3, #back_home3').on('click', function() {
         horizontalIndex--;
         if (horizontalIndex < 0) {}
         const horizontalOffsetVW = -horizontalIndex * 300;
@@ -159,12 +137,12 @@ $(document).ready(function() {
     });
 
         // 세로 슬라이드 버튼 클릭 시
-    $('#nextabout').on('click', function() {
+    $('#nextabout, #about_move, #about_move2, #about_move3').on('click', function() {
         verticalIndex++;
         const verticalOffsetVH = verticalIndex * 100;
         $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
     });
-    $('#backBtn_about').on('click', function() {
+    $('#backBtn_about, #go_project').on('click', function() {
         verticalIndex--;
         if (verticalIndex < 0) {}
         const verticalOffsetVH = -verticalIndex * 100;
