@@ -22,6 +22,13 @@ a{
     font-style: normal; */
 }
 
+.video-container {
+    width: 100vw; height: 100vh;
+    object-fit: cover; 
+    position: fixed; top: 0; left: 0;
+    z-index: 1000;
+}
+
 .wrap_box{
     background-color: black;
     position: relative;
@@ -90,10 +97,11 @@ iframe {
     margin-right: 2vw;
 }
 .explain p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 1.5vw;
     display: block;
     margin-bottom: 6vw;
+    line-height: 1.5;
 }
 .main .explain ul {
     position: relative;
@@ -381,7 +389,7 @@ iframe {
     cursor: pointer;
 }
 .project_nomanual .explain .link_out_nomanual:hover {
-    color: violet;
+    color: red;
 }
 .project_nomanual .explain p {
     margin-bottom: 5vw;
@@ -448,7 +456,7 @@ iframe {
     width: 25vw; height: 10vh;
 }
 .mobile img {
-    position: absolute; bottom: 8vw; left: 3vw;
+    position: absolute; bottom: 8vw; left: 5vw;
     width: 5vw; height: 5vw;
     border: 1px solid white;
     border-radius: 5px;
@@ -456,7 +464,7 @@ iframe {
 }
 .mobile span {
     font-size: 1rem;
-    position: absolute; bottom: 6vw; left: 3vw;
+    position: absolute; bottom: 6vw; left: 5vw;
 }
 .nomanual_container .mac_book {
     width: 55vw; height: 40vw;
@@ -507,7 +515,7 @@ iframe {
     cursor: pointer;
 }
 .project_ikea .explain .link_out_ikea:hover {
-    color: violet;
+    color: red;
 }
 .project_ikea .explain p {
     margin-bottom: 5vw;

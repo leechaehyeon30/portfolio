@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    // 영상 요소
+    const video = document.getElementById("myVideo");
+
+    // 영상이 끝났을 때 이벤트 처리
+    video.onended = function() {
+    // 영상이 끝나면 영상 요소를 숨기기
+    video.style.display = "none";
+    };
+
+    // 창이 로드되면 자동으로 재생 시작
+    window.onload = function() {
+    video.play(); // 자동 재생
+    };
+
+
     $('.project1').mouseenter(function() {
         $('.project1').css('transform', 'translateX(0vw)');
     });
