@@ -1,0 +1,527 @@
+.wrap{
+    width: 100vw; height: 100vh; 
+    position: relative;
+}
+/* 상단이벤트창 */
+.event{
+    width: 100vw; height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    padding-top: 5px;
+    position: fixed; top: 0; left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+.event .slide{
+    position: absolute;
+    width: 100%; height: 100%;
+    transition: transform 0.5s ease;
+}
+.envet .active{
+    transform: translateY(0);
+}
+.slide:not(.active) {
+    transform: translateY(-100%);
+}
+/* 네비게이션 왼쪽 */
+header{
+    width: 100vw; height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    position: fixed; top: 30px; left: 50%;
+    transform: translate(-50%, 0);
+}
+.nav1 , .nav2{
+    display: flex;
+}
+.nav1 .gnb{
+    display: flex;
+    margin-top: 30px;
+}
+.nav1 .gnb a{
+    display: block;
+    width: 120px; height: 50px;
+    font-size: 13px;
+}
+.nav1 .submenu{
+    display: none;
+    background-color: #ffffff;
+    width: 350px; height: 330px;
+    padding: 20px;
+    padding-left: 40px;
+    position: absolute; 
+    left: 0px; top: 70px;
+    text-align: left;
+}
+.nav1 .submenu a{
+    width: 160px;
+    height: 50px;
+}
+.nav1 .subShop{
+    height: 380px;
+}
+/* 로고이미지 */
+header .logo{
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+header .logo img{
+    width: 40px;
+}
+/* 네비게이션 오른쪽 */
+.nav2 .gnb{
+    display: flex;
+    margin-top: 30px;
+}
+.nav2 .gnb a{
+    display: block;
+    width: 120px; height: 50px;
+    align-items : center;
+    font-size: 13px;
+}
+.nav2 .gnb .sub4>a{
+    width: 90px;
+    margin-right: 20px;
+}
+.nav2 .gnb .sub4 a img{
+    width: 25px;
+}
+.mobileNav2, .mobileNav{
+    display: none;
+}
+
+    /* 장바구니 클릭기능 */
+    .bag{
+        width: 500px; height: 100vh;
+        position: fixed; right: 0px; top: 0;
+        z-index: 10;
+        background-color: white;
+        display: none;
+    }
+    .bag h2{
+        font-size: 20px;
+        font-weight: normal;
+        padding: 30px 50px;
+        display: block;
+    }
+    .bag img{
+        width: 25px;
+        position: absolute; top: 30px; right: 30px;
+        float: right;
+        cursor: pointer;
+    }
+    .bag span{
+        display: block;
+        padding: 50px;
+        font-size: 13px;
+    }
+    .bag button{
+        position: absolute;
+        top: 300px; left: 50%;
+        transform: translate(-50%, 0);
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: 15px 80px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    /* 언어선택 호버기능 */
+    .nav2 .gnb .sub4 ul{
+        display: none;
+    }
+    .nav2 .gnb .sub4:hover .lang_choice{
+        display: flex;
+    }
+    .lang_choice {
+        width: 400px; height: 100vh;
+        background-color: white;
+        position: absolute; right: 0; top: 70px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .lang_choice li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    .lang_choice li a {
+        padding: 20px 15px;
+        margin-right: 10px;
+        text-align: right;
+        font-size: 13px;
+    }
+    .lang_choice>li>img {
+        width: 25px;
+    }
+    /* 검색버튼 클릭 창 */
+    .modal{
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed; top: 0; right: 0;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .modal hr{
+        width: 350px; height: 1px;
+        border: none;
+        background-color: #ffffff;
+        position: fixed; top: 55%; left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .modal span{
+        text-align: center;
+        font-size: 13px;
+        position: fixed; top: 60%; left: 50%;
+        transform: translate(-50%, 0);
+        color: #ffffff;
+    }
+    .close {
+        width: 40px;
+        cursor: pointer;
+        position: absolute; right: 100px; top: 100px;
+    }
+
+
+/* 메인 */
+main{
+    width: 100vw; 
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.detail{
+    width: 60vw; height: 960px;
+    overflow: hidden;
+    float: left;
+    overflow-y: scroll;
+}
+.detail img{
+    width: 90%; height: auto;
+}
+.detail::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+}
+
+.rec{
+    width: 100vw; height: 620px;
+    clear: both;
+}
+.rec h3{
+    display: block;
+    padding: 2vw;
+}
+.rec .goods{
+    text-align: center;
+}
+.rec .goods div{
+    float: left;
+    width: 431px; height: 518px;
+}
+.rec .goods img {
+    width: 100%;
+}
+/* 메인 우측 구매 */
+
+.fix{
+    width: 40vw; height: 960px;
+    float: right;
+    margin-top: 20px;
+}
+.fix .h p{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.fix .size p{
+    font-size: 13px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.fix .size li{
+    padding: 10px 15px;
+    float: left;
+    border: 1px solid #333;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.fix .btn{
+    clear: both;
+    content: "";
+    display: block;
+    padding-top: 30px;
+}
+.fix .btn button{
+    width: 313px; height: 38px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    font-size: 11px;
+}
+.fix .btn .fir{
+    margin-right: 2px;
+}
+
+.box{
+    width: 100%; height: 125px;
+    margin-top: 25px;
+}
+.naver{
+    width: 313px; height: 119px;
+    float: left;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.naver p{
+    font-size: 10px; 
+    float: left;
+    padding: 17px 5px;
+    padding-right: 20px;
+}
+.naver .n_pay{
+    float: left;
+    width: 126px; height: 51px;
+    border-radius: 10px;
+    background-color: #09C85E;
+    margin: 10px 0px;
+    margin-right: 10px;
+    padding: 15px 15px; 
+}
+.naver .n_pay img{
+    width: 23px;
+    float: left;
+    margin-right: 10px;
+}
+.naver .n_pay h2{
+    font-size: 16px;
+}
+.naver .hat{
+    float: right;
+    width: 51px; height: 51px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.naver p span{
+    color: #09C85E;
+}
+.naver hr{
+    clear: both;
+    content: "";
+    display: block;
+}
+.naver button{
+    width: 18px; height: 18px;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+.kakao{
+    width: 313px; height: 119px;
+    float: left;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    position: relative;
+    margin-left: 8px;
+}
+.kakao p{
+    font-size: 13px; 
+    float: left;
+    padding: 14px 5px;
+    padding-right: 5px;
+}
+.kakao p:nth-child(1) {
+    padding-top: 20px;
+    font: 11px;
+}
+
+.kakao .k_pay{
+    float: left;
+    width: 126px; height: 51px;
+    border-radius: 10px;
+    background-color: #FFDE00;
+    margin: 10px 0px;
+    margin-right: 5px;
+    padding: 13px 15px; 
+}
+.kakao .k_pay img{
+    width: 23px;
+    float: left;
+    margin-right: 5px;
+}
+.kakao .k_pay h2{
+    font-size: 16px;
+}
+.kakao .alr{
+    float: left;
+    width: 51px; height: 51px;
+    background-color: #FFDE00;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 16px 10px;
+    font-size: 16px;;
+}
+.kakao .alr img{
+    width: 21px;
+    float: left;
+}
+.kakao span{
+    font-size: 14px; 
+    float: left;
+}
+.kakao .alr div{
+    width: 51px; height: 17px;
+    border-radius: 8px;
+    background-color: #E65F3E;
+    position: absolute; top: 3px; right: 64px;
+    font-size: 10px;
+    padding: 3px;
+    text-align: center;
+    color: #ffffff;
+}
+.kakao .hat{
+    float: right;
+    width: 51px; height: 51px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.kakao hr{
+    clear: both;
+    content: "";
+    display: block;
+}
+.naver button{
+    width: 18px; height: 18px;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+.info span{
+    display: block;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-right: 30px;
+    padding: 20px 0px;
+    float: left;
+}
+.info p {
+    font-size: 14px;
+    display: block;
+    width: 100%; height: 250px; 
+    overflow-y: scroll;
+}
+.info div{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+
+/* 푸터 */
+footer{
+    width: 100%; height: 125px;
+    clear: both; 
+    content: "";
+    display: block;
+}
+footer ul{
+    width: 100%; height: 60px;
+}
+footer ul li{
+    float: left;
+}
+footer ul li a{
+    float: left;
+    padding-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    left: 820px;
+    font-size: 16px;
+}
+footer p{
+    clear: both;
+    content: "";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+
+    /* 플로팅버튼 */
+    .floating {
+        position: fixed;
+        right: 70px;
+        bottom: 50px;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .floating .quick {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .floating .quick img {
+        cursor: pointer;
+        width: 90px;
+        height: auto;  /* 이미지의 비율 유지 */
+    }
+    
+    .quicksos {
+        transform-origin: bottom;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+    .group{
+        width: 400px;
+        height: 710px;
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: #f6f6f6;
+        color: white;
+        box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.4);
+        position: fixed; bottom: 90px; right: 20px;
+    }
+    .floating .quicksos .nom{
+        width: 400px;
+    }
+    .floating .quicksos .group div{
+        float: left;
+        color: #333;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cls_chat{
+        width: 60px; height: 60px;
+        background-color: #f6f6f6;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.4);
+        position: fixed; bottom: 20px; right: 20px;
+    }
+    .cls_chat img{
+        width: 30px;
+    }

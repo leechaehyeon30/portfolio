@@ -3,343 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-    <!-- <link rel="icon" href="img/portfolio.png" type="image/x-icon"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>이채현의 포트폴리오</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,900;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <title>노매뉴얼 (노메뉴얼) | NOMANUAL</title>
 </head>
 <body>
-    <div>
-        <video id="myVideo" class="video-container" autoplay muted>
-            <source src="img/intro.mp4" type="video/mp4">
-        </video>
-    </div>
     <div class="wrap">
-        <div class="wrap_box">
-            <div class="horizontal-slider">
-                <div class="main">
-                    <div class="title">
-                        <h2>Portfolio <span>leechaehyeon</span></h2>
-                    </div>
-                    <div class="explain">
-                        <h1>WEB DESIGNER</h1>
-                        <span class="span2">미니멀</span><span>모던한</span><span>감각적인</span>
-                        <p>심플하고 모던하지만 많은것을 담아내는 디자인을 추구합니다. <br>항상 혁신적이며 감각적인 디자인을 할 수 있도록 노력하는 디자이너 입니다.</p>
-                        <div>
-                            <ul>
-                                <li>
-                                    <a id="nextproject" href="#">Project</a>
-                                    <img src="img/main/Arrow.png" alt="화살표">
-                                </li>
-                                <li>
-                                    <a id="nextabout" href="#">About</a>
-                                    <img src="img/main/Arrow.png" alt="화살표">
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                    <img src="img/main/Arrow.png" alt="화살표">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <article class="blind">
-                            <div class="bg_img">
-                                <div class="image-container1"></div>
-                                <div class="image-container2"></div>
-                                <div class="image-container3"></div>
-                                <div class="image-container4"></div>
-                            </div>
-                        </article>
-                        <article class="contents">
-                            <section id="nomanualproject" class="project1">
-                                <img class="project_img" src="img/main/nomanual_visual.png" alt="1번 프로젝트">
-                                <div class="sec_txt1">
-                                    <span>NOMANUAL WEB SITE</span>
-                                    <h2>PUBLISHING</h2>
-                                    <p>스트릿 브랜드 노매뉴얼 홈페이지 <br> 리디자인 및 퍼블리싱</p>
-                                </div>
-                                <div class="hidden_num1">
-                                    <img src="img/main/1.png" alt="1">
-                                </div>
-                            </section>
-                            <section id="ikeaproject" class="project2">
-                                <img class="project_img" src="img/main/ikea_visual.png" alt="2번 프로젝트">
-                                <div class="sec_txt2">
-                                    <span>IKEA WEB SITE</span>
-                                    <h2>PUBLISHING</h2>
-                                    <p>가구 브랜드 이케아 홈페이지 <br> 리디자인 및 퍼블리싱</p>
-                                </div>
-                                <div class="hidden_num2">
-                                    <img src="img/main/2.png" alt="2">
-                                </div>
-                            </section>
-                            <section id="addproject" class="project3">
-                                <img class="project_img" src="img/main/add_visual.png" alt="3번 프로젝트">
-                                <div class="sec_txt3">
-                                    <span>NOMANUAL WEB SITE</span>
-                                    <h2>PUBLISHING</h2>
-                                    <p>스트릿 브랜드 노매뉴얼 홈페이지 <br> 리디자인 및 퍼블리싱</p>
-                                </div>
-                                <div class="hidden_num3">
-                                    <img src="img/main/3.png" alt="3">
-                                </div>
-                            </section>
-                            <section class="project4">
-                                <img class="project_img" src="img/main/add_visual.png" alt="4번 프로젝트">
-                                <div class="sec_txt4">
-                                    <span>NOMANUAL WEB SITE</span>
-                                    <h2>PUBLISHING</h2>
-                                    <p>스트릿 브랜드 노매뉴얼 홈페이지 <br> 리디자인 및 퍼블리싱</p>
-                                </div>
-                                <div class="hidden_num4">
-                                    <img src="img/main/4.png" alt="4">
-                                </div>
-                            </section>
-                        </article>
-                    </div>
-                </div>
-                <div class="project_nomanual">
-                    <div class="left">
-                        <div id="backBtn" class="title">
-                            <h2>Portfolio <span>leechaehyeon</span></h2>
-                        </div>
-                        <button id="back_home" class="back">
-                            <img src="img/main/back.png" alt="뒤로가기">
-                        </button>
-                        <div class="explain">
-                            <h1> <span class="link_out_nomanual">NOMANUAL</span> WEB SITE</h1>
-                            <span>미니멀</span><span>모던한</span><span>혁신적인</span>
-                            <p>노매뉴얼 웹사이트 리뉴얼은 브랜드 진화와 고객 기대 변화를 반영하는 과정으로, 최신 디자인과 웹 기술을 적용해 효율적이고 효과적인 웹사이트를 만들기 위한 노력의 일환입니다. 이를 통해 브랜드 가치를 증대시키고자 하였으며, 평소 자주 사용하는 브랜드인 노매뉴얼을 리뉴얼하게 되었습니다.</p>
-                            <div>
-                                <ul class="gnb">
-                                    <li>
-                                        <a href="#">Project</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="#">nomanual</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_100_fromikea" href="#">ikea</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_200_fromadd" href="#">add</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_300_fromadd2" href="#">add2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a id="about_move" href="#">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="txt_container">
-                                    <li>웹 모바일 반응형 리뉴얼</li>
-                                    <li>개인 프로젝트 | 2024. 10 - 2024. 11 20D*3H</li>
-                                    <li>사용 툴 | 피그마, 포토샵, 일러스트, html, css, js, jquery</li>
-                                </ul>
-                            </div>
-                            <button id="viewSiteBtn">view site</button>
-                        </div>
-                        <div class="txt_container">
-                            
-                        </div>
-                        <div class="mobile">
-                            <img src="img/main/nomanual_qr.png" alt="qrcode">
-                            <br>
-                            <span>모바일 버전을 확인할 수 있어요!</span>
-                        </div>
-                    </div>
-                    <div class="nomanual_container">
-                        <img class="mac_book" src="img/main/macbook.png" alt="맥북">
-                        <iframe class="mac_ver" src="https://leechaehyeon30.github.io/nomanual/" style="transform: scale(0.5);"></iframe>
-                        <img class="iphone" src="img/main/iphone.png" alt="아이폰">
-                        <iframe class="iphone_ver" src="https://leechaehyeon30.github.io/nomanual/" style="transform: scale(0.5);"></iframe>
-                    </div>
-                </div>
-                <div class="project_ikea">
-                    <div class="left">
-                        <div id="backBtn2" class="title">
-                            <h2>Portfolio <span>leechaehyeon</span></h2>
-                        </div>
-                        <button id="back_home2" class="back">
-                            <img src="img/main/back.png" alt="뒤로가기">
-                        </button>
-                        <div class="explain">
-                            <h1> <span class="link_out_ikea">IKEA</span> WEB SITE</h1>
-                            <span>유연한</span><span>친환경적인</span><span>모듈화된</span>
-                            <p>이케아 웹사이트 리뉴얼은 모던하고 실용적인 브랜드 이미지를 바탕으로, 디자인 철학, 혁신적인 쇼핑 경험, 그리고 고객 중심의 콘텐츠와 기능을 통해 글로벌 브랜드로서의 경쟁력을 강화하고, 고객의 신뢰를 얻을 수 있는 UI를 제공하는 방향으로 진행되었습니다.</p>
-                            <div>
-                                <ul class="gnb">
-                                    <li>
-                                        <a href="#">Project</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a id="back_100_fromnomanual" href="#">nomanual</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">ikea</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_100_fromadd" href="#">add</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_200_fromadd2" href="#">add2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a id="about_move2" href="#">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="txt_container">
-                                <li>웹 모바일 클론코딩 및 리뉴얼</li>
-                                <li>개인 프로젝트 | 2024. 10 - 2024. 11 20D*3H</li>
-                                <li>사용 툴 | 피그마, 포토샵, 일러스트, html, css, js, jquery</li>
-                            </ul>
-                            <button id="viewSiteBtn2">view site</button>
-                        </div>
-                        <div class="mobile">
-                            <img src="img/main/nomanual_qr.png" alt="qrcode">
-                            <br>
-                            <span>모바일 버전을 확인할 수 있어요!</span>
-                        </div>
-                    </div>
-                    <div class="ikea_container">
-                        <img class="mac_book" src="img/main/macbook.png" alt="맥북">
-                        <iframe class="mac_ver" src="https://leechaehyeon30.github.io/ikea/" style="transform: scale(0.4);"></iframe>
-                        <img class="iphone" src="img/main/iphone.png" alt="아이폰">
-                        <iframe class="iphone_ver" src="https://leechaehyeon30.github.io/ikea/" style="transform: scale(0.5);"></iframe>
-                    </div>
-                </div>
-                <div class="project_add">
-                    <div class="left">
-                        <div id="backBtn3" class="title">
-                            <h2>Portfolio <span>leechaehyeon</span></h2>
-                        </div>
-                        <button id="back_home3" class="back">
-                            <img src="img/main/back.png" alt="뒤로가기">
-                        </button>
-                        <div class="explain">
-                            <h1>NOMANUAL WEB SITE</h1>
-                            <span>미니멀</span><span>깔끔한</span><span>새로운</span>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <div>
-                                <ul class="gnb">
-                                    <li>
-                                        <a href="#">Project</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a id="back_200_fromnomanual" href="#">nomanual</a>
-                                            </li>
-                                            <li>
-                                                <a id="back_100_fromikea" href="#">ikea</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">add</a>
-                                            </li>
-                                            <li>
-                                                <a id="go_100_fromadd2" href="#">add2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a id="about_move3" href="#">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="txt_container">
-                                <li>웹 모바일 반응형 디자인</li>
-                                <li>개인 프로젝트 | 2024. 10 - 2024. 11</li>
-                                <li>사용 툴 | figma / visual studio</li>
-                            </ul>
-                            <button id="viewSiteBtn3">view site</button>
-                        </div>
-                        <div class="mobile">
-                            <img src="img/main/nomanual_qr.png" alt="qrcode">
-                            <br>
-                            <span>모바일 버전을 확인할 수 있어요!</span>
-                        </div>
-                    </div>
-                    <div class="add_container">
-                        <img class="mac_book" src="img/main/macbook.png" alt="맥북">
-                        <iframe class="mac_ver" src="https://leechaehyeon30.github.io/nomanual/" style="transform: scale(0.5);"></iframe>
-                        <img class="iphone" src="img/main/iphone.png" alt="아이폰">
-                        <iframe class="iphone_ver" src="https://leechaehyeon30.github.io/nomanual/" style="transform: scale(0.5);"></iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="event">
+            <p class="slide active">NOMANUAL</p>
+            <p class="slide">24SS STORE</p>
         </div>
-        <div class="about">
-            <div id="backBtn_about" class="title">
-                <h2>Portfolio <span>leechaehyeon</span></h2>
+        <header>
+            <nav class="nav1">
+                <ul class="gnb">
+                    <li id="nav_shop">
+                        <a href="index_shop.html">SHOP</a>
+                        <ul class="submenu subShop">
+                            <li>
+                                <a href="index_shop.html">ALL</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">TOP</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">BOTTOM</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">ACC</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">GOODS</a>
+                            </li>
+                            <li>
+                                <a href="index_shop.html">EXCLUSIVE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav_info">
+                        <a href="#">INFO</a>
+                        <ul class="submenu subInfo">
+                            <li>
+                                <a href="#">STORE</a>
+                            </li>
+                            <li>
+                                <a href="#">STOCKIST</a>
+                            </li>
+                            <li>
+                                <a href="#">CONTACT</a>
+                            </li>
+                            <li>
+                                <a href="#">INSTAGRAM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://nomanual-official.com/" target="_blank">ARCHIVE</a>
+                    </li>
+                    <li id="search_Btn">
+                        <a href="#">SERCH</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobileNav">
+                <img src="img/icon/menu_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.png" alt="메뉴 이미지">
             </div>
-            <div class="explain">
-                <h1>PROFILE</h1>
-                <span>미니멀</span><span>깔끔한</span><span>새로운</span>
-                <p>어쩌구저쩌구를 추구하는 포트폴리오</p>
-                <div>
-                    <ul class="gnb">
-                        <li>
-                            <a id="go_project" href="#">Project</a>
-                            <ul class="submenu">
-                                <li>
-                                    <a href="#">nomanual</a>
-                                </li>
-                                <li>
-                                    <a href="#">ikea</a>
-                                </li>
-                                <li>
-                                    <a href="#">add</a>
-                                </li>
-                                <li>
-                                    <a href="#">add2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div>
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./img/header/logo_monr.png" alt="로고이미지">
+                        <img src="./img/header/logo_white.png" alt="로고이미지">
+                    </a>
+                </h1>
             </div>
-            <div class="about_container">
-                <div class="profile">
-                    <div>
-                    </div>
-                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</span>
-                    <h2>이채현 lee chae hyeon</h2>
-                    <p>웹디자이너</p>
-                    <p>2002.06.14</p>
-                    <p>dlcogus13@icloud.com</p>
-                </div>
-                <ul>
-                    <li>sKILL</li>
-                    <li>EDUCATION</li>
-                    <li>CERTIFICATION</li>
+            <div class="nav2">
+                <ul class="gnb">
+                    <li class="sub1">
+                        <a href="#">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="#">ACCOUNT</a>
+                    </li>
+                    <li class="sub3">
+                        <a href="#">BAG (0)</a>
+                    </li>
+                    <li class="sub4">
+                        <a href="#">
+                            <img src="img/header/korea.jpg" alt="언어선택 아이콘">
+                        </a>
+                        <ul class="lang_choice">
+                            <li>
+                                <a href="#">INTERNATIONAL</a>
+                                <img src="img/header/korea.jpg" alt="한국어">
+                            </li>
+                            <li>
+                                <a href="#">KOREA</a>
+                                <img src="img/header/korea.jpg" alt="한국어">
+                            </li>
+                            <li>
+                                <a href="#">JAPAN</a>
+                                <img src="img/header/korea.jpg" alt="한국어">
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
+            <div class="mobileNav2">
+                <div id="modal_open">
+                    <img src="img/icon/search_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.png" alt="검색아이콘">
+                </div>
+                <div id="bag_open">
+                    <img src="img/icon/shopping_cart_24dp_FFFFFF_FILL0_wght200_GRAD0_opsz24.png" alt="장바구니아이콘">
+                </div>
+            </div>
+        </header>
+        <div class="mobilemenu">
+            <img class="cls_menu" src="img/icon/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="닫기">
+            <ul class="mobilegnb">
+                <li id="mobileshop">
+                    <a href="#">SHOP</a>
+                    <ul class="mobilesubmenu shopopen">
+                        <li>
+                            <a href="index_shop.html">ALL</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">OUTER</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">TOP</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">BOTTOM</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">ACC</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">GOODS</a>
+                        </li>
+                        <li>
+                            <a href="index_shop.html">EXCLUSIVE</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="mobileinfo">
+                    <a href="#">INFO</a>
+                    <ul class="mobilesubmenu infoopen">
+                        <li>
+                            <a href="#">STORE</a>
+                        </li>
+                        <li>
+                            <a href="#">STOCKIST</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="#">INSTAGRAM</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ARCHIVE</a>
+                </li>
+                <li>
+                    <a href="#">LOGIN</a>
+                </li>
+                <li id="mobileinter">
+                    <a href="#">INTERNATIONAL</a>
+                    <ul class="mobilesubmenu interopen">
+                        <li>
+                            <a href="#">KOREA</a>
+                        </li>
+                        <li>
+                            <a href="#">JAPAN</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="login">
+            <img class="cls_login" src="img/icon/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="닫기">
+            <div class="signtxt">
+                <h2>Sign in</h2>
+                <div class="border">ID</div>
+                <div class="border">PW</div>
+                <ul>
+                    <li><a href="#">Find id</a></li>
+                    <li><a href="#">Find password</a></li>
+                </ul>
+                <div class="grp_div">
+                    <div>LOG IN</div>
+                    <div>CREATE ACCOUNT</div>
+                </div>
+                <div class="black">NAVER <img src="#" alt="네이버로고"></div>
+                <div class="black">GOOGLE <img src="#" alt="구글로고"></div>
+                <div class="black">KAKAO <img src="#" alt="카카오로고"></div>
+                <div class="black">LINE <img src="#" alt="라인로고"></div>
+            </div>
+        </div>
+        <div class="bag">
+            <h2>BAG (0)</h2>
+            <span>장바구니가 비어있습니다.</span>
+            <img class="cls_bag" src="img/icon/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="닫기">
+            <button>장바구니로 이동</button>
+        </div>
+        <div class="modal" style="display: none;">
+            <hr>
+            <span>검색어를 입력하시고 엔터를 누르세요. <br> Enter keywords and press Return to search.</span>
+            <img class="close" src="img/icon/close_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="닫는 이미지">
+        </div>
+        <main>
+            <section class="visual">
+                <div class="slider">
+                    <div class="slide-img">
+                        <img src="img/main_page/mainvisual01.jpg" alt="메인비주얼">
+                        <span>24FW SEASON OFF <br> 12.19.THU. - 01.02.THU.</span>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <article class="sec1">
+                    <h2>BEST ITEM</h2>
+                    <div class="middle">
+                        <div class="item draggable">
+                            <ul class="firstitem">
+                                <li class="first">
+                                    <a href="#">
+                                        <img src="img/main_page/bestitem1.jpg" alt="베스트아이템 1">
+                                        <span class="show">C.P HOODIE - WHITE <br> KRW 99,000</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/main_page/bestitem2.jpg" alt="베스트아이템 2">
+                                        <span class="show">DIVISION HOODED DUCK DOWN - SAGE GREEN <br> KRW 229,000</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/main_page/bestitem3.jpg" alt="베스트아이템 3">
+                                        <span class="show">SYMBOL MULTI CARGO PANTS - BLACK <br> KRW 129,000</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/main_page/bestitem4.jpg" alt="베스트아이템 3">
+                                        <span class="show">COWICHAN HOODED ZIP-UP - NAVY <br> KRW 149,000</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="ipad_list">
+                                <ul>
+                                    <li class="first">
+                                        <a href="#">
+                                            <img src="img/main_page/bestitem5.jpg" alt="인기 컨텐츠">
+                                            <span>CROPPED HAIRY KNIT - MELANGE <br> 109,000₩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/main_page/bestitem6.jpg" alt="인기 컨텐츠">
+                                            <span>SPRAY DYEING KNIT - NAVY <br> 119,000₩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/main_page/bestitem7.jpg" alt="인기 컨텐츠">
+                                            <span>N.S NYLON JUMPER - DEEP KHAKI <br> 139,000₩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/main_page/bestitem8.jpg" alt="인기 컨텐츠">
+                                            <span>MRI HOODIE - BLACK <br> 96,000₩</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button id="prev" class="prev">
+                            <img src="img/icon/arrow_back_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="화살표 왼쪽방향">
+                        </button>
+                        <button id="next" class="next">
+                            <img src="img/icon/arrow_forward_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="화살표 오른쪽방향">
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="sec2">
+                    <div class="sec2img">
+                        <img class="img1" src="img/main_page/Final_BOX_AdobeCreativeCloudExpress-1-3.gif" alt="포장패키징">
+                        <div class="squar"></div>
+                        <div class="frame">
+                            <h2>NEW ARRIVAR</h2>
+                            <div class="imgGroup">
+                                <div class="content one">
+                                    <img src="img/main_page/newitem1.png" alt="이미지 슬라이드1">
+                                    <span>SKADI DUCK DOWN - MATTE BLACK <br> KRW 249,000</span>
+                                </div>
+                                <div class="content2">
+                                    <img src="img/main_page/newitem2.png" alt="이미지 슬라이드1">
+                                    <span>SKADI DUCK DOWN - GLOSSY BLACK <br> 249,000₩</span>
+                                </div>
+                                <div class="content3">
+                                    <img src="img/main_page/newitem3.png" alt="이미지 슬라이드1">
+                                    <span>EXCEDO STRING BACKPACK - BLACK <br> 129,000₩</span>
+                                </div>
+                                <div class="content4">
+                                    <img src="img/main_page/newitem4.png" alt="이미지 슬라이드1">
+                                    <span>REVERSIBLE WOOL HAIRY KNIT - BROWN <br> 89,000₩</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="next2" class="next">
+                        shop으로 이동하기
+                    </button>
+                </article>
+                <article class="sec3">
+                    <div class="product">
+                        <ul>
+                            <li>
+                                <a href="#">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="#">TOP</a>
+                            </li>
+                            <li>
+                                <a href="#">BOTTOM</a>
+                            </li>
+                            <li>
+                                <a href="#">ACC</a>
+                            </li>
+                            <li>
+                                <a href="#">GOODS</a>
+                            </li>
+                            <li>
+                                <a href="#">EXCLUSIVE</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="imgblock">
+                        <a class="capitem" href="#">
+                            <img src="img/main_page/product_1.png" alt="이미지그룹 1">
+                        </a>
+                        <a class="outeritem" href="#">
+                            <img src="img/main_page/product_2.png" alt="이미지그룹 2">
+                        </a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li>
+                    <a href="#">Agreement</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Guide</a>
+                </li>
+            </ul>
+            <span>
+                Address:14087경기도 안양시 만안구 전파로 44번길 57 (안양동) 두산명학아너비즈타워 3F 319호 (안양동, 두산명학 아너비즈타워)
+                <br> 주식회사 에스에프비 Ceo:김주현,이준범 Business License:778-88-01395 E-Commerce Permit:2022-서울서대문-0167 Email:MANAGE@NOMANUAL-OFFICIAL.COM TEL:010-2851-8163 ⓒ 2021 nomanual
+            </span>
+        </footer>
+        <div class="floating">
+            <div class="quick">
+                <img id="myImage" src="img/footer/file.png" alt="플로팅버튼">
+            </div>
+            <div class="quicksos">
+                <div class="group">
+                    <img class="nom" src="img/footer/float_img.png" alt="내용">
+                </div>
+                <div class="cls_chat">
+                    <img src="img/icon/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="닫기버튼">
+                </div>
+            </div>
         </div>
     </div>
+    
 </body>
 </html>
