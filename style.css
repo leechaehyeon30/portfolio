@@ -46,7 +46,14 @@ a{
     width: 100%; height: 100%;
     transition: transform 1s ease-in-out;
     flex-direction: column;
-    /* position: relative; */
+    display: block;
+}
+.horizontal-slider > div {
+    width: 100%; /* 기본 크기 */
+    flex-shrink: 0; /* 슬라이드 크기가 줄어들지 않도록 */
+}
+.wrap > div {
+    height: 100%; /* 세로 슬라이드의 기본 크기 */
 }
 .main, .project_nomanual {
     display: block;
@@ -374,7 +381,7 @@ iframe {
     background-color: black;
     border: 1px solid white;
     border-radius: 10px;
-    width: 50px; height: 50px;
+    width: 48px; height: 48px;
 }
 .project_nomanual .explain {
     width: 35vw; height: auto;
@@ -394,21 +401,23 @@ iframe {
 .project_nomanual .explain p {
     margin-bottom: 5vw;
 }
-.project_nomanual .explain .gnb{
+.project_nomanual .gnb{
     height: 3vw;
-    position: absolute; top: -3vw; left: 40vw;
-    display: flex;
+    position: absolute; top: 3vw; left: 40vw;
     cursor: pointer;
     align-items: center;
     z-index: 10;
 }
-.project_nomanual .explain .gnb li:nth-child(1) a{
+.project_nomanual .gnb>ul{
+    display: flex;
+}
+.project_nomanual .gnb li:nth-child(1) a{
     color: white;
 }
-.project_nomanual .explain .gnb li {
+.project_nomanual .gnb li {
     margin-left: 55%;
 }
-.project_nomanual .explain .gnb li a {
+.project_nomanual .gnb li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
@@ -416,17 +425,17 @@ iframe {
     width: 100px;
     color: #808080;
 }
-.project_nomanual .explain .gnb:hover .submenu,
-.project_nomanual .explain .submenu:hover {
+.project_nomanual .gnb:hover .submenu,
+.project_nomanual .submenu:hover {
     display: block;
 }
-.project_nomanual .explain .submenu {
+.project_nomanual .submenu {
     position: absolute; top: 3vw; right: 38%;
     display: none;
     cursor: pointer;
     z-index: 10;
 }
-.project_nomanual .explain .submenu li a{
+.project_nomanual .submenu li a{
     display: block;
     background-color: #000000;
     width: 200px; height: 50px;
@@ -434,14 +443,7 @@ iframe {
     text-align: center;
     font-size: 1rem;
 }
-.txt_container {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-}
-.txt_container li {
-    line-height: 1.8;
-    font-size: 1rem;
-}
+
 #viewSiteBtn {
     width: 13vw; height: 4vw;
     border-radius: 10px;
@@ -451,6 +453,7 @@ iframe {
     font-size: 1.125rem;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 5vw;
 }
 .mobile {
     width: 25vw; height: 10vh;
@@ -520,21 +523,23 @@ iframe {
 .project_ikea .explain p {
     margin-bottom: 5vw;
 }
-.project_ikea .explain .gnb{
+.project_ikea .gnb{
     height: 3vw;
-    position: absolute; top: -3vw; left: 40vw;
-    display: flex;
+    position: absolute; top: 3vw; left: 40vw;
     cursor: pointer;
     align-items: center;
     z-index: 10;
 }
-.project_ikea .explain .gnb li:nth-child(1) a{
+.project_ikea .gnb>ul{
+    display: flex;
+}
+.project_ikea .gnb li:nth-child(1) a{
     color: white;
 }
-.project_ikea .explain .gnb li {
+.project_ikea .gnb li {
     margin-left: 55%;
 }
-.project_ikea .explain .gnb li a {
+.project_ikea .gnb li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
@@ -542,17 +547,17 @@ iframe {
     width: 100px;
     color: #808080;
 }
-.project_ikea .explain .gnb:hover .submenu,
-.project_ikea .explain .submenu:hover {
+.project_ikea .gnb:hover .submenu,
+.project_ikea .submenu:hover {
     display: block;
 }
-.project_ikea .explain .submenu {
+.project_ikea .submenu {
     position: absolute; top: 3vw; right: 38%;
     display: none;
     cursor: pointer;
     z-index: 10;
 }
-.project_ikea .explain .submenu li a{
+.project_ikea .submenu li a{
     display: block;
     background-color: #000000;
     width: 200px; height: 50px;
@@ -569,6 +574,7 @@ iframe {
     font-size: 1.125rem;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 5vw;
 }
 .ikea_container .mac_book {
     width: 55vw; height: 40vw;
@@ -616,21 +622,23 @@ iframe {
 .project_add .explain p {
     margin-bottom: 5vw;
 }
-.project_add .explain .gnb{
+.project_add .gnb{
     height: 3vw;
     position: absolute; top: -3vw; left: 40vw;
-    display: flex;
     cursor: pointer;
     align-items: center;
     z-index: 10;
 }
-.project_add .explain .gnb li:nth-child(1) a{
+.project_add .gnb>ul{
+    display: flex;
+}
+.project_add .gnb li:nth-child(1) a{
     color: white;
 }
-.project_add .explain .gnb li {
+.project_add .gnb li {
     margin-left: 55%;
 }
-.project_add .explain .gnb li a {
+.project_add .gnb li a {
     font-size: 1.25rem;
     font-weight: 300;
     text-align: left;
@@ -638,17 +646,17 @@ iframe {
     width: 100px;
     color: #808080;
 }
-.project_add .explain .gnb:hover .submenu,
-.project_add .explain .submenu:hover {
+.project_add .gnb:hover .submenu,
+.project_add .submenu:hover {
     display: block;
 }
-.project_add .explain .submenu {
+.project_add .submenu {
     position: absolute; top: 3vw; right: 38%;
     display: none;
     cursor: pointer;
     z-index: 10;
 }
-.project_add .explain .submenu li a{
+.project_add .submenu li a{
     display: block;
     background-color: #000000;
     width: 200px; height: 50px;
@@ -665,6 +673,7 @@ iframe {
     font-size: 1.125rem;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 5vw;
 }
 .add_container .mac_book {
     width: 55vw; height: 40vw;
