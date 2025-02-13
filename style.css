@@ -111,8 +111,8 @@ iframe {
     line-height: 1.5;
 }
 .main .explain ul {
-    position: relative;
-    bottom: -10vw; left: 0vw;
+    position: fixed;
+    bottom: 2vw; left: 3vw;
 }
 .main .explain ul li{
     display: flex;
@@ -176,20 +176,19 @@ iframe {
     width: 100%;
     height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_screen.png'); /* 이미지 URL */
+    background-image: url('img/main/nintendo_screen.png'); /* 이미지 URL */
     background-size: cover;
     mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
     /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
 }
-.image-container4{
+/* .image-container4{
     width: 100%;
     height: 400px;
     display: none;
-    background-image: url('img/main/nomanual_screen.png'); /* 이미지 URL */
+    background-image: url('img/main/nomanual_screen.png');
     background-size: cover;
     mask-image: linear-gradient(to bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 47%, rgba(0, 0, 0, 0) 100%);
-    /* -webkit- 사파리에서도 보이게하려면 mask-image앞에 추가 */
-}
+} */
 
 /* 메인컨텐츠요소 스타일 */
 .container article {
@@ -377,7 +376,7 @@ iframe {
 }
 /* 헤더 텍스트 스타일 */
 .back {
-    position: absolute; top: 5.5vw; left: 1.3vw;
+    position: absolute; top: 5.3vw; left: 1.3vw;
     background-color: black;
     border: 1px solid white;
     border-radius: 10px;
@@ -400,6 +399,9 @@ iframe {
 }
 .project_nomanual .explain p {
     margin-bottom: 5vw;
+}
+.project_nomanual .explain .txt_container {
+    line-height: 2;
 }
 .project_nomanual .gnb{
     height: 3vw;
@@ -476,10 +478,16 @@ iframe {
     pointer-events: none;
 }
 .nomanual_container .mac_ver {
-    width: 91vw; height: 64vw;
-    position: absolute; bottom: -6vw; right: -13%;
+    width: 46vw; height: 36vw; 
+    overflow: hidden;
+    border-radius: 5%;
+    position: absolute; bottom: 6.5vw; right: 9.5vw;
     z-index: 1;
-    background-color: white;
+}
+.nomanual_container .mac_ver img{
+    width: 46vw;
+    position: absolute; top: 0vw; right: 0vw;
+    transition: all 1.5s ease-in-out;
 }
 .nomanual_container .iphone {
     width: 14vw;
@@ -488,12 +496,17 @@ iframe {
     pointer-events: none;
 }
 .nomanual_container .iphone_ver {
-    width: 24.8vw; height: 54vw;
-    position: absolute; bottom: -8.5vw; right: 44.5vw;
+    width: 12.5vw; height: 26.8vw;
+    position: absolute; bottom: 5.2vw; right: 50.5vw;
     z-index: 2;
     overflow: hidden;
-    border-radius: 50px;
+    border-radius: 10%;
     background-color: white;
+}
+.nomanual_container .iphone_ver img{
+    width: 12.5vw;
+    position: absolute; top: 0vw; right: 0vw;
+    transition: all 1.5s ease-in-out;
 }
 
 /* project 
@@ -518,7 +531,7 @@ iframe {
     cursor: pointer;
 }
 .project_ikea .explain .link_out_ikea:hover {
-    color: red;
+    color: blue;
 }
 .project_ikea .explain p {
     margin-bottom: 5vw;
@@ -760,10 +773,11 @@ iframe {
     display: flex;
 }
 .about_container .profile {
-    width: 20vw; height: 55vh;
+    width: 20vw; height: 60vh;
     border: 1px solid white;
     border-radius: 10px;
     margin: 5vw 8vw;
+    margin-left: 15vw;
     text-align: center;
     font-size: 0.9rem;
     line-height: 2;
@@ -773,7 +787,42 @@ iframe {
     width: 80%; height: 50%;
     background-color: white;
     border-radius: 10px;
+    overflow: hidden;
+}
+.about_container .profile div img{
+    width: 80%; height: auto;
 }
 .about_container .profile h2 {
     font-size: 1.2rem;
+}
+.about_container .margin {
+    margin-top: 4vw;
+    position: relative;
+}
+.about_container .skill{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.3;
+    float: left;
+    display: block;
+}
+.about_container .skill2 {
+    clear: both;
+    float: left;
+    margin-top: 4vw;
+}
+.about_container .right {
+    position: absolute; top: 0; left: 450px;
+}
+.about_container .right img {
+    width: 150%;
+    margin-top: 2vw;
+}
+.about_container .skill .subskill li {
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 3;
+}
+.about_container .skill .subskill li span {
+    font-weight: 100;
 }

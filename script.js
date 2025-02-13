@@ -247,4 +247,26 @@ $(document).ready(function() {
     //     const verticalOffsetVH = verticalIndex * 100;
     //     $('.wrap').css('transform', `translateY(-${verticalOffsetVH}%)`);
     // });
+
+
+    $('.mac_ver').hover(
+        function() {
+          // 마우스를 올렸을 때 이미지 크기 확대 및 아래로 이동
+            $('.mac_ver img').css('top', '-63.5vw');
+        }, 
+        function() {
+          // 마우스를 뗐을 때 원래 크기로 돌아옴
+            $('.mac_ver img').css('top', '0vw');
+        }
+    );
+    $('.iphone_ver').hover(
+        function() {
+          // 마우스를 올렸을 때 이미지 크기 확대 및 아래로 이동
+            $('.iphone_ver img').css('top', '-50vw');
+        }, 
+        function() {
+          // 마우스를 뗐을 때 원래 크기로 돌아옴
+            $('.iphone_ver img').css('top', '0vw');
+        }
+    );
 });
