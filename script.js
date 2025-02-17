@@ -99,6 +99,12 @@ $(document).ready(function() {
     $('#viewSiteBtn2').click(function() {
         window.open("https://leechaehyeon30.github.io/ikea/", "_blank");
     });
+    $('.link_out_ikea').click(function() {
+        window.open("https://www.nintendo.com/", "_blank");
+    });
+    $('#viewSiteBtn3').click(function() {
+        window.open("https://leechaehyeon30.github.io/nintendo/", "_blank");
+    });
 
 
 
@@ -267,6 +273,36 @@ $(document).ready(function() {
         function() {
           // 마우스를 뗐을 때 원래 크기로 돌아옴
             $('.iphone_ver img').css('top', '0vw');
+        }
+    );
+    $('.mac_ver2').hover(
+        function() {
+          // 마우스를 올렸을 때 이미지 크기 확대 및 아래로 이동
+            $('.mac_ver2 img').css('top', '-163.5vw');
+        }, 
+        function() {
+          // 마우스를 뗐을 때 원래 크기로 돌아옴
+            $('.mac_ver2 img').css('top', '0vw');
+        }
+    );
+    $('.iphone_ver2').hover(
+        function() {
+          // 마우스를 올렸을 때 이미지 크기 확대 및 아래로 이동
+            $('.iphone_ver2 img').css('top', '-163vw');
+        }, 
+        function() {
+          // 마우스를 뗐을 때 원래 크기로 돌아옴
+            $('.iphone_ver2 img').css('top', '0vw');
+        }
+    );
+    $('.mac_ver3').hover(
+        function() {
+          // 마우스를 올렸을 때 이미지 크기 확대 및 아래로 이동
+            $('.mac_ver3 img').css('top', '-170.5vw');
+        }, 
+        function() {
+          // 마우스를 뗐을 때 원래 크기로 돌아옴
+            $('.mac_ver3 img').css('top', '0vw');
         }
     );
 });
